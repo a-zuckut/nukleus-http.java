@@ -67,6 +67,17 @@ public class MessageFormatIT
         k3po.finish();
     }
 
+    @Ignore
+    @Test
+    @Specification({
+        "${route}/client/controller",
+        "${client}/request.with.content.length/client",
+        "${server}/request.with.content.length/server" })
+    public void requestWithLongHeaderValue() throws Exception
+    {
+        k3po.finish();
+    }
+
     @Test
     @Specification({
         "${route}/server/controller",
